@@ -7,6 +7,10 @@
 
 <br><br>
 
+# ▋Try Demo
+
+<a href='https://t.me/draftmail_bot'>Try Demo</a>
+
 # ▋New Features
 + Support MIME messages (Link verification)
 + Added emoji to buttons.
