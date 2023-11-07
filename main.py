@@ -16,6 +16,15 @@ from telebot.util import quick_markup # Markup generator
 from utils import Generate_Email      # Email generator
 from utils import Load_Mail_Box       # Mail box loader
 
+# Define the button text and URL
+button_text = "🔗 Developer"
+url = "https://github.com/ShejanMahamud"
+
+# Create an InlineKeyboardButton with the URL
+button = InlineKeyboardButton(text=button_text, url=url)
+
+# Create an InlineKeyboardMarkup with the button
+markup = InlineKeyboardMarkup([[button]])
 
 # Connect to bot
 # Token placed in utils.py file. You can change it with your token
@@ -52,17 +61,13 @@ def start_command_handler(message: object) -> None:
             chat_id=message.chat.id, 
             action="typing"
         )
+
+        reply_text = f"Welcome friend {message.from_user.first_name}.\nYou can create temp mail using DraftMail."
+
         TempMailBot.reply_to(
             message=message,
-            text=f"Welcome friend {message.from_user.first_name}.\nYou can create temp mail using DraftMail.\nUse /mail for DraftMail menu!",
-            buttons=InlineKeyboardMarkup(
-                             [
-                             [
-            InlineKeyboardButton("🔗 Developer" , url='https://github.com/ShejanMahamud'),
-                   ] 
-                             ])
-            
-   
+            text=reply_text,
+            reply_markup=markup
         )
 
         # Initialize user account's files
