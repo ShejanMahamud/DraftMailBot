@@ -4,9 +4,7 @@
 
 
 # Libraries
-import pyrogram
-from pyrogram import *
-from pyrogram.types import InlineKeyboardButton,InlineKeyboardMarkup
+from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery, constants, error
 import telebot                        # Bot API Library
 import requests                       # Internet requests
 import utils                          # Bot Utilities
