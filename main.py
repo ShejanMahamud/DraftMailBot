@@ -4,8 +4,6 @@
 
 
 # Libraries
-from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery, constants, error
-from telegram.ext import ApplicationBuilder, CommandHandler, CallbackQueryHandler, ContextTypes
 import telebot                        # Bot API Library
 import requests                       # Internet requests
 import utils                          # Bot Utilities
@@ -16,15 +14,6 @@ from telebot.util import quick_markup # Markup generator
 from utils import Generate_Email      # Email generator
 from utils import Load_Mail_Box       # Mail box loader
 
-# Define the button text and URL
-button_text = "🔗 Developer"
-url = "https://github.com/ShejanMahamud"
-
-# Create an InlineKeyboardButton with the URL
-button = InlineKeyboardButton(text=button_text, url=url)
-
-# Create an InlineKeyboardMarkup with the button
-markup = InlineKeyboardMarkup([[button]])
 
 # Connect to bot
 # Token placed in utils.py file. You can change it with your token
@@ -61,13 +50,11 @@ def start_command_handler(message: object) -> None:
             chat_id=message.chat.id, 
             action="typing"
         )
-
-        reply_text = f"Welcome friend {message.from_user.first_name}.\nYou can create temp mail using DraftMail."
-
         TempMailBot.reply_to(
             message=message,
-            text=reply_text,
-            reply_markup=markup
+            text=f"Welcome friend {message.from_user.first_name}.\nYou can create temp mail using DraftMail.\nUse /mail for DraftMail menu!",
+            reply_markup=Markups,          
+   
         )
 
         # Initialize user account's files
@@ -87,7 +74,7 @@ def mail_generator_handler(message: object) -> None:
     # Force chat type to private. Skip if user is Owner
     if utils.force_private(message):
 
-        # reply markup
+        # reply markup1
         Markups = quick_markup(
             {
                 "📥 New Email": {
@@ -104,6 +91,9 @@ def mail_generator_handler(message: object) -> None:
                 },
                 "❌ Close": {
                     "callback_data": "Close"
+                },
+                "🏆 GitHub": {
+                    'url': 'https://github.com/ShejanMahamud/DraftMailBot'
                 },
             },
             row_width=2,
