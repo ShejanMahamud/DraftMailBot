@@ -4,6 +4,8 @@
 
 
 # Libraries
+from pyrogram import *
+from pyrogram.types import InlineKeyboardButton,InlineKeyboardMarkup
 import telebot                        # Bot API Library
 import requests                       # Internet requests
 import utils                          # Bot Utilities
@@ -53,6 +55,12 @@ def start_command_handler(message: object) -> None:
         TempMailBot.reply_to(
             message=message,
             text=f"Welcome friend {message.from_user.first_name}.\nYou can create temp mail using DraftMail.\nUse /mail for DraftMail menu!",
+            buttons=InlineKeyboardMarkup(
+                             [
+                             [
+            InlineKeyboardButton("🔗 Developer" , url='https://github.com/ShejanMahamud'),
+                   ] 
+                             ])
             
    
         )

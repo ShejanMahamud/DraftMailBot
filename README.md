@@ -39,7 +39,7 @@ Then you have to install requirements before running bot
 1. Navigate to bot directory
 2. Install requirements using pip
 ```bash
-cd TempMailBot
+cd DraftMailBot
 ```
 ```bash
 pip install -r requirements.txt
@@ -83,5 +83,5 @@ sudo killall -HUP tor
 ```
 <br>
 
-# Thanks <3
+# Thanks
 > Dont forget to star this repository if you made it helpful!
