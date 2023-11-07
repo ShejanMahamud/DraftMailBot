@@ -1,6 +1,6 @@
 <h1 align="center">
     <img align='left' src="./Images/DraftMail.png" width=200 height=200/>
-    <h2>TempMail Telegram Bot </h2>
+    <h2>DraftMail Telegram Bot </h2>
   <p><b>Make unlimited emails just in minute with access to mailbox!</b></p>
   <p><i>Usable for <b>Verification</b> codes and messages, <b>support MIME</b>!</i></p>
 </h1>
@@ -28,7 +28,7 @@ Also note that now you can access to attachments (like confirm links) from your 
 # ▋Clone Repository
 To get started, first you need to **clone** this repository from github into your machine:
 ```bash
-git clone https://github.com/Kourva/TempMailBot
+git clone https://github.com/ShejanMahamud/DraftMailBot
 ```
 and if you dont have git you can install it from your package manager!
 
