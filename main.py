@@ -5,6 +5,7 @@
 
 # Libraries
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery, constants, error
+from telegram.ext import ApplicationBuilder, CommandHandler, CallbackQueryHandler, ContextTypes
 import telebot                        # Bot API Library
 import requests                       # Internet requests
 import utils                          # Bot Utilities
