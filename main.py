@@ -4,6 +4,7 @@
 
 
 # Libraries
+import pyrogram
 from pyrogram import *
 from pyrogram.types import InlineKeyboardButton,InlineKeyboardMarkup
 import telebot                        # Bot API Library
